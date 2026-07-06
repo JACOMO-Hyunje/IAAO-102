@@ -1,0 +1,27 @@
+{
+  "chapter": 1,
+  "title": "Assessment and Appraisal Theory",
+  "cards": [
+    {"id": "ch1_q1", "type": "fill_in", "prompt": "One of the three approaches to value in which the appraiser derives a value indication by converting anticipated benefits through ownership of income-producing property is the ___ approach.", "answer": "income approach", "accept": ["income"]},
+    {"id": "ch1_q2", "type": "list", "prompt": "As an investor analyzes various opportunities, what will he or she consider?", "items": ["how much will it cost", "how much will i get back", "when will i get it back", "what are the risks", "what is the return compared to other investments of similar risk"]},
+    {"id": "ch1_q3", "type": "fill_in", "prompt": "The economic principle of ___ states that value is created by the expectation of benefits to be derived in the future.", "answer": "anticipation"},
+    {"id": "ch1_q4", "type": "fill_in", "prompt": "The economic principle of ___ states that a property's maximum value tends to be set by the lowest cost or price at which another property of equivalent utility can be acquired.", "answer": "substitution"},
+    {"id": "ch1_q5", "type": "fill_in_multi", "prompt": "Competition among sellers may lead to a/an ___ (blank 1), which reduces prices and profits. Competition among buyers may lead to ___ (blank 2), which increases prices and profits to sellers.", "answers": ["oversupply", "shortage"]},
+    {"id": "ch1_q6", "type": "fill_in", "prompt": "The ___ rate reflects the return of the investment in the wasting asset.", "answer": "recapture"},
+    {"id": "ch1_q7", "type": "list", "prompt": "List nine factors influencing investor decisions.", "items": ["safety", "liquidity", "size", "collateral", "time", "management", "appreciation", "income tax", "leverage"]},
+    {"id": "ch1_q8", "type": "fill_in", "prompt": "___ leverage is achieved when funds are invested in property, which has a higher rate of return than the cost of borrowed funds.", "answer": "positive"},
+    {"id": "ch1_q9", "type": "list", "prompt": "The four most common methods of financing real estate are:", "items": ["mortgage", "trust deed", "cash", "land contract"], "accept_variants": {"land contract": ["contract for deed"]}},
+    {"id": "ch1_q10", "type": "fill_in", "prompt": "A mortgage on personal property is termed a ___ mortgage.", "answer": "chattel"},
+    {"id": "ch1_q11", "type": "fill_in", "prompt": "A ___ mortgage is also called a second mortgage.", "answer": "junior"},
+    {"id": "ch1_q12", "type": "list", "prompt": "List four types of mortgages classified according to repayment provisions.", "items": ["amortized", "straight", "reverse", "partially amortized"]},
+    {"id": "ch1_q13", "type": "fill_in", "prompt": "A payment on the balance due of a note at the end of the loan term that is in excess of the regular payment amounts is called a ___ payment.", "answer": "balloon"},
+    {"id": "ch1_q14", "type": "fill_in", "prompt": "A ___ mortgage covers real estate as well as personal property included with the real estate.", "answer": "package"},
+    {"id": "ch1_q15", "type": "list", "prompt": "List the four variables in real estate financing that affect the mortgage payment.", "items": ["amount borrowed", "interest rate", "term of loan", "frequency of payments"]},
+    {"id": "ch1_q16", "type": "fill_in", "prompt": "The ___ rate (or discount rate) reflects the return on the investment.", "answer": "overall yield", "accept": ["overall yield rate"], "note": "Precise term required - 'yield' alone does not count for MC-precision practice."},
+    {"id": "ch1_q17", "type": "list", "prompt": "The summation concept is comprised of the following four parts:", "items": ["safe rate", "risk rate", "rate for non-liquidity", "rate for management"]},
+    {"id": "ch1_q18", "type": "fill_in", "prompt": "The ___ rate reflects the relationship between the real estate taxes and the value of the property.", "answer": "effective tax"},
+    {"id": "ch1_q19", "type": "fill_in", "prompt": "To obtain value using the IRV formula, one must ___ the income by the rate.", "answer": "divide"},
+    {"id": "ch1_q20", "type": "fill_in", "prompt": "To obtain value using the VIF formula, one must ___ the income by the factor.", "answer": "multiply"}
+  ],
+  "distractor_pool": ["surplus", "yield", "discount", "primary mortgage", "junior mortgage", "excess", "deficit", "amortization rate", "interest", "cost", "risk", "loan-to-value", "principal", "assessment rate", "market rate", "capitalization rate", "negative", "neutral", "conventional", "reverse"]
+}
