@@ -119,3 +119,8 @@ automatically on a schedule or on notebook run.
   app itself).
 - Priority Review tags reflect that single data point and will read as
   fairly binary (missed-once = High) until more sessions accumulate.
+
+## Notes
+As of July 6, 2026: 
+- redefine the study guides as it originally was (tailored info from SRM for review/questions)
+- consolidate json files into 1 => section 1 (chapters 1-3) & section 2 (4 & 5) then overall (1-5)
