@@ -3,7 +3,7 @@
   "title": "Assessment and Appraisal Theory",
   "cards": [
     {"id": "ch1_q1", "type": "fill_in", "prompt": "One of the three approaches to value in which the appraiser derives a value indication by converting anticipated benefits through ownership of income-producing property is the ___ approach.", "answer": "income approach", "accept": ["income"]},
-    {"id": "ch1_q2", "type": "list", "prompt": "As an investor analyzes various opportunities, what will he or she consider?", "items": ["how much will it cost", "how much will i get back", "when will i get it back", "what are the risks", "what is the return compared to other investments of similar risk"]},
+    {"id": "ch1_q2", "type": "list", "prompt": "As an investor analyzes various opportunities, what will he or she consider?", "items": ["how much will it cost", "how much will I get back", "when will I get it back", "what are the risks", "what is the return compared to other investments of similar risk"]},
     {"id": "ch1_q3", "type": "fill_in", "prompt": "The economic principle of ___ states that value is created by the expectation of benefits to be derived in the future.", "answer": "anticipation"},
     {"id": "ch1_q4", "type": "fill_in", "prompt": "The economic principle of ___ states that a property's maximum value tends to be set by the lowest cost or price at which another property of equivalent utility can be acquired.", "answer": "substitution"},
     {"id": "ch1_q5", "type": "fill_in_multi", "prompt": "Competition among sellers may lead to a/an ___ (blank 1), which reduces prices and profits. Competition among buyers may lead to ___ (blank 2), which increases prices and profits to sellers.", "answers": ["oversupply", "shortage"]},
