@@ -1,77 +1,12 @@
 # IAAO 102 — Chapter 1: Assessment and Appraisal Theory
 ## Study Guide & Flashcards
 
-## 📊 Priority Review — Chapter 1 Review Questions
-
-*Based on 1 completed quiz session(s) logged for this chapter. Re-run the quiz to update these tiers as your recall improves.*
-
-### 🔴 HIGH PRIORITY (missed last attempt)
-
-**Q12.** List four types of mortgages classified according to repayment provisions.
-*Answer:* amortized, straight, reverse, partially amortized
-
-**Q13.** A payment on the balance due of a note at the end of the loan term that is in excess of the regular payment amounts is called a ___ payment.
-*Answer:* balloon
-
-**Q14.** A ___ mortgage covers real estate as well as personal property included with the real estate.
-*Answer:* package
-
-**Q15.** List the four variables in real estate financing that affect the mortgage payment.
-*Answer:* amount borrowed, interest rate, term of loan, frequency of payments
-
-**Q16.** The ___ rate (or discount rate) reflects the return on the investment.
-*Answer:* overall yield
-
-**Q18.** The ___ rate reflects the relationship between the real estate taxes and the value of the property.
-*Answer:* effective tax
-
-**Q2.** As an investor analyzes various opportunities, what will he or she consider?
-*Answer:* how much will it cost, how much will i get back, when will i get it back, what are the risks, what is the return compared to other investments of similar risk
-
-**Q5.** Competition among sellers may lead to a/an ___ (blank 1), which reduces prices and profits. Competition among buyers may lead to ___ (blank 2), which increases prices and profits to sellers.
-*Answer:* oversupply, shortage
-
-**Q6.** The ___ rate reflects the return of the investment in the wasting asset.
-*Answer:* recapture
-
-**Q7.** List nine factors influencing investor decisions.
-*Answer:* safety, liquidity, size, collateral, time, management, appreciation, income tax, leverage
-
-**Q9.** The four most common methods of financing real estate are:
-*Answer:* mortgage, trust deed, cash, land contract
-
-### 🟢 LOW PRIORITY (answered correctly)
-
-**Q1.** One of the three approaches to value in which the appraiser derives a value indication by converting anticipated benefits through ownership of income-producing property is the ___ approach.
-*Answer:* income approach
-
-**Q10.** A mortgage on personal property is termed a ___ mortgage.
-*Answer:* chattel
-
-**Q11.** A ___ mortgage is also called a second mortgage.
-*Answer:* junior
-
-**Q17.** The summation concept is comprised of the following four parts:
-*Answer:* safe rate, risk rate, rate for non-liquidity, rate for management
-
-**Q19.** To obtain value using the IRV formula, one must ___ the income by the rate.
-*Answer:* divide
-
-**Q20.** To obtain value using the VIF formula, one must ___ the income by the factor.
-*Answer:* multiply
-
-**Q3.** The economic principle of ___ states that value is created by the expectation of benefits to be derived in the future.
-*Answer:* anticipation
-
-**Q4.** The economic principle of ___ states that a property's maximum value tends to be set by the lowest cost or price at which another property of equivalent utility can be acquired.
-*Answer:* substitution
-
-**Q8.** ___ leverage is achieved when funds are invested in property, which has a higher rate of return than the cost of borrowed funds.
-*Answer:* positive
-
 ---
 
 ## Section I — Intro to Income Capitalization
+
+**Q: What is the income capitalization approach, and what is it one of three of?**
+A: One of the three traditional approaches to value (income, cost, sales comparison — standard appraisal framework; this SRM chapter doesn't name the other two explicitly, but assumes familiarity with the three-approaches concept). In this approach, value is estimated by converting anticipated benefits (income/rent) arising from ownership of an income-producing property — this conversion is also called the capitalization process.
 
 **Q: What are the 3 components of the capitalization process?**
 A: Value, Net Operating Income, Capitalization Rate.
@@ -100,6 +35,9 @@ A: Ownership entity (individual/corporate/partnership), Financial interest (equi
 ---
 
 ## Section II — Real Estate Investment
+
+**Q: What 5 questions does an investor ask when analyzing opportunities?**
+A: (1) How much will it cost? (2) How much will I get back? (3) When will I get it back? (4) What are the risks? (5) What is the return of a real estate investment compared to other investments with similar risks? *(This is a different list from the "9 factors influencing investor decisions" below — don't merge them.)*
 
 **Q: Two categories of investment, per this chapter?**
 A: Fixed-dollar investments (low risk/gain, e.g. savings account) and Growth investments (higher risk/opportunity, e.g. stocks, real estate).
@@ -218,7 +156,7 @@ A: IRV uses *net* operating income (income minus expenses) against a rate; VIF u
 ## ⚠️ Common Mix-Up Traps (based on how review questions are phrased)
 
 1. **Anticipation vs. Substitution** — both get quizzed as fill-in-the-blank; anticipation = future benefits expectation, substitution = price-setting via equivalent alternatives.
-2. **"9 factors influencing investor decisions" (Section II) vs. "4 summation concept parts" (Section IV)** — different lists, don't merge them.
+2. **Three similar-sounding lists** — the "5 questions investors ask" (Section II), "9 factors influencing investor decisions" (Section II), and "4 summation concept parts" (Section IV) are three *different* lists. Easy to blend them under time pressure.
 3. **Mortgage classified by purpose** (first, junior, purchase-money, construction, open-end, chattel, package) **vs. classified by repayment structure** (amortized, ARM, straight, partially amortized, reverse) — the review questions ask about repayment-structure types specifically (Q12), so don't answer with the purpose-based list.
 4. **IRV's "I" = NOI, but VIF's "I" = Gross Income** — the single most common formula mix-up.
 5. Recapture rate (return *of* investment) vs. overall yield/discount rate (return *on* investment) — easy to swap under time pressure.

@@ -1,95 +1,17 @@
 # IAAO 102 — Chapter 2: Development of the Net Operating Income Estimate
 ## Study Guide & Flashcards
 
-## 📊 Priority Review — Chapter 2 Review Questions
-
-*No completed quiz sessions logged yet for Chapter 2. Run the quiz notebook and finish a full deck to populate real priority data here.*
-
-### ⚪ NOT YET ATTEMPTED (no quiz data logged yet)
-
-**Q1.** In addition to sales and leases, ___ (blank 1) and ___ (blank 2) can be valid sources of market information, if the appraiser exercises care.
-*Answer:* offers, listings
-
-**Q10.** A lease in which the tenant is required to pay all operating expenses associated with the real estate is known as a ___ lease.
-*Answer:* triple net
-
-**Q11.** List four factors that must be considered when comparing rental properties.
-*Answer:* date of lease, location of property, physical characteristics of property, terms of lease
-
-**Q12.** List five common units of comparison when comparing rental properties.
-*Answer:* rent per unit, rent per room, rent per space, rent per square foot, gross income multiplier
-
-**Q13.** The total leasable area, including common areas is known as ___.
-*Answer:* gross leasable area
-
-**Q14.** The ___ is the potential gross income, less vacancy and collection loss, plus appropriate miscellaneous income.
-*Answer:* effective gross income
-
-**Q15.** Income from vending machines and coin-operated laundries is/are considered examples of ___ income.
-*Answer:* miscellaneous
-
-**Q16.** The first step in reconstructing the income and expense statement is to determine the ___.
-*Answer:* potential gross income
-
-**Q17.** Which of the following would be considered a proper expense in the reconstructed operating expense statement?
-*Answer:* All of the above
-
-**Q18.** Expense amounts for short-lived items such as carpet, drapes, and water heaters are considered ___.
-*Answer:* reserves for replacement
-
-**Q19.** When reconstructing an income/expense statement, depreciation and debt service would be considered a/an ___ expense.
-*Answer:* improper
-
-**Q2.** List five sources of rental income data.
-*Answer:* commercial property managers, tenants of comparable properties, real estate brokers and salespeople, sellers and purchasers of comparable properties, public records
-
-**Q20.** The income remaining after developing effective gross income and allowing for operating expenses and reserves for replacement is known as ___.
-*Answer:* net operating income
-
-**Q21.** ___ take the form of either free rent or extra tenant improvement allowances.
-*Answer:* rent concessions
-
-**Q22.** ___ tends to be less than fee simple value because leases are typically set at market level when written, but usually fall below market levels as time passes.
-*Answer:* leased fee value
-
-**Q23.** ___ buildings are generally a little older but still have good quality management and tenants.
-*Answer:* class b
-
-**Q24.** ___ rent is used as a common denominator to compare leases with different provisions. This rent is the lease base rent less rent concessions.
-*Answer:* effective
-
-**Q25.** The formula to calculate an operating expense ratio (OER) is: ___.
-*Answer:* total expenses divided by effective gross income
-
-**Q3.** Another name for market rent is ___ rent.
-*Answer:* economic
-
-**Q4.** A lease that provides for one or more extensions of the lease term in the original lease document at the option of the tenant is a ___ lease.
-*Answer:* renewal
-
-**Q5.** The fixed portion of the rent under the terms of a percentage lease is known as ___.
-*Answer:* minimum base rent
-
-**Q6.** When contract rent exceeds economic rent, the difference is known as ___ rent.
-*Answer:* excess
-
-**Q7.** The rent that is over and above a guaranteed minimum base rent is referred to as ___ rent.
-*Answer:* overage
-
-**Q8.** A contract that requires a fixed minimum base rent and a variable rent based on volume of business, sales, productivity, or use of the property by the tenant is called a ___ lease.
-*Answer:* percentage
-
-**Q9.** A lease in which the landlord is required to pay all operating expenses associated with the real estate is known as a ___ lease.
-*Answer:* gross
-
----
-
-
 This is the biggest chapter in the course (Income & Expense Statements alone = 35% of chapter time), and it's where most of the formulas you'll actually calculate with live. Structure below follows the chapter's own roman-numeral outline: Sources of Income Data → Basis of Income (leases/rent types) → Considerations Comparing Leases → Investment Class → Rental Units of Comparison → Income and Expense Statement.
 
 ---
 
 ## Section I — Sources of Income Data
+
+**Q: What caveat does the SRM attach to using offers, listings, and opinions as income data sources?**
+A: They "can be a valid source of market information, if care is exercised in their use" — the exercising-care qualifier is the specific nuance tested (not just that they're valid, but that care is required).
+
+**Q: List the 5 sources of rental income data as specifically tested in the review questions.**
+A: Commercial property managers, tenants of comparable properties, real estate brokers and salespeople, sellers and purchasers of comparable properties, public records. *(Note: this specific 5-item combination mixes "public records" — one of the top-level Market sources — with 4 of the 8 Market participants sub-items. The full participants list also includes income & expense surveys, appraisers, banks/commercial lenders, and the appeal process — see below.)*
 
 **Q: Name the 4 broad categories of income data sources.**
 A: Market sources (public records, leases, offers/listings, market participants), Established data banks (subscriber services + in-house databases), Published sources (BOMA, IREM, CBRE, Smith Travel Research), Internet/commercial listing websites.
@@ -113,6 +35,9 @@ A: A contract (tenant's obligation to pay rent) and a conveyance (landlord grant
 **Q: Leased fee interest vs. leasehold interest — who holds which?**
 A: Landlord holds the leased fee interest (value of the leases to the owner). Tenant holds the leasehold interest (right of use/occupancy under the lease).
 
+**Q: How does leased fee value compare to fee simple value?**
+A: Per the SRM, leased fee value can be higher, lower, or the same as fee simple value, depending on the relationship between contract rent and market rent as of the valuation date (also affected by differing cap rates for market-norm vs. credit-tenant/long-term-lease situations). Practical tendency tested in review questions: since leases are typically set at market rent when signed but often drift below market as time passes, leased fee value *tends to be less than* fee simple value in practice.
+
 **Q: Positive leasehold value vs. negative leasehold value — which party benefits?**
 A: If contract rent < market rent → positive leasehold value (benefits tenant). If market rent drops below contract rent → negative leasehold value (benefits landlord).
 
@@ -123,6 +48,9 @@ A:
 - **Excess rent** — contract rent > market rent.
 - **Deficit rent (leasehold rent/income)** — market rent > contract rent (tenant benefits from the difference).
 - **Effective rent** — lease base rent minus rent concessions; used as a common denominator to compare leases with different provisions.
+
+**Q: What are rent concessions, specifically?**
+A: Take the form of either free rent or extra tenant improvement allowances. Free rent is usually given for a period at the beginning of a lease. Concessions are offered when the supply of rental property exceeds demand.
 
 **Q: Effective rent formula, and why do we use it?**
 A: Effective rent = Base rent − Rent concessions. Used to compare leases with different terms on an apples-to-apples basis, and to help develop market rent.
@@ -190,6 +118,9 @@ A: No formal international standard exists; classification is relative to the sp
 ---
 
 ## Section V — Rental Units of Comparison
+
+**Q: List the 5 common units of comparison, as directly tested in the review questions.**
+A: Rent per unit, rent per room, rent per space, rent per square foot, Gross Income Multiplier (GIM).
 
 **Q: Match the unit of comparison to the property type: rent per unit, rent per room, rent per space, rent per square foot.**
 A:
