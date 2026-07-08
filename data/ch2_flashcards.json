@@ -2,31 +2,213 @@
   "chapter": 2,
   "title": "Development of the Net Operating Income Estimate",
   "cards": [
-    {"id": "ch2_q1", "type": "fill_in_multi", "prompt": "In addition to sales and leases, ___ (blank 1) and ___ (blank 2) can be valid sources of market information, if the appraiser exercises care.", "answers": ["offers", "listings"]},
-    {"id": "ch2_q2", "type": "list", "prompt": "List five sources of rental income data.", "items": ["commercial property managers", "tenants of comparable properties", "real estate brokers and salespeople", "sellers and purchasers of comparable properties", "public records"]},
-    {"id": "ch2_q3", "type": "fill_in", "prompt": "Another name for market rent is ___ rent.", "answer": "economic"},
-    {"id": "ch2_q4", "type": "fill_in", "prompt": "A lease that provides for one or more extensions of the lease term in the original lease document at the option of the tenant is a ___ lease.", "answer": "renewal"},
-    {"id": "ch2_q5", "type": "fill_in", "prompt": "The fixed portion of the rent under the terms of a percentage lease is known as ___.", "answer": "minimum base rent"},
-    {"id": "ch2_q6", "type": "fill_in", "prompt": "When contract rent exceeds economic rent, the difference is known as ___ rent.", "answer": "excess"},
-    {"id": "ch2_q7", "type": "fill_in", "prompt": "The rent that is over and above a guaranteed minimum base rent is referred to as ___ rent.", "answer": "overage"},
-    {"id": "ch2_q8", "type": "fill_in", "prompt": "A contract that requires a fixed minimum base rent and a variable rent based on volume of business, sales, productivity, or use of the property by the tenant is called a ___ lease.", "answer": "percentage"},
-    {"id": "ch2_q9", "type": "fill_in", "prompt": "A lease in which the landlord is required to pay all operating expenses associated with the real estate is known as a ___ lease.", "answer": "gross"},
-    {"id": "ch2_q10", "type": "fill_in", "prompt": "A lease in which the tenant is required to pay all operating expenses associated with the real estate is known as a ___ lease.", "answer": "triple net"},
-    {"id": "ch2_q11", "type": "list", "prompt": "List four factors that must be considered when comparing rental properties.", "items": ["date of lease", "location of property", "physical characteristics of property", "terms of lease"]},
-    {"id": "ch2_q12", "type": "list", "prompt": "List five common units of comparison when comparing rental properties.", "items": ["rent per unit", "rent per room", "rent per space", "rent per square foot", "gross income multiplier"]},
-    {"id": "ch2_q13", "type": "fill_in", "prompt": "The total leasable area, including common areas is known as ___.", "answer": "gross leasable area"},
-    {"id": "ch2_q14", "type": "fill_in", "prompt": "The ___ is the potential gross income, less vacancy and collection loss, plus appropriate miscellaneous income.", "answer": "effective gross income"},
-    {"id": "ch2_q15", "type": "fill_in", "prompt": "Income from vending machines and coin-operated laundries is/are considered examples of ___ income.", "answer": "miscellaneous"},
-    {"id": "ch2_q16", "type": "fill_in", "prompt": "The first step in reconstructing the income and expense statement is to determine the ___.", "answer": "potential gross income"},
-    {"id": "ch2_q17", "type": "multiple_choice_given", "prompt": "Which of the following would be considered a proper expense in the reconstructed operating expense statement?", "options": ["Salaries", "Management", "Utilities", "All of the above"], "answer": "All of the above"},
-    {"id": "ch2_q18", "type": "fill_in", "prompt": "Expense amounts for short-lived items such as carpet, drapes, and water heaters are considered ___.", "answer": "reserves for replacement"},
-    {"id": "ch2_q19", "type": "fill_in", "prompt": "When reconstructing an income/expense statement, depreciation and debt service would be considered a/an ___ expense.", "answer": "improper"},
-    {"id": "ch2_q20", "type": "fill_in", "prompt": "The income remaining after developing effective gross income and allowing for operating expenses and reserves for replacement is known as ___.", "answer": "net operating income"},
-    {"id": "ch2_q21", "type": "fill_in", "prompt": "___ take the form of either free rent or extra tenant improvement allowances.", "answer": "rent concessions"},
-    {"id": "ch2_q22", "type": "fill_in", "prompt": "___ tends to be less than fee simple value because leases are typically set at market level when written, but usually fall below market levels as time passes.", "answer": "leased fee value"},
-    {"id": "ch2_q23", "type": "fill_in", "prompt": "___ buildings are generally a little older but still have good quality management and tenants.", "answer": "class b"},
-    {"id": "ch2_q24", "type": "fill_in", "prompt": "___ rent is used as a common denominator to compare leases with different provisions. This rent is the lease base rent less rent concessions.", "answer": "effective"},
-    {"id": "ch2_q25", "type": "fill_in", "prompt": "The formula to calculate an operating expense ratio (OER) is: ___.", "answer": "total expenses divided by effective gross income", "accept": ["total expenses / effective gross income", "total expenses divided by egi"]}
+    {
+      "id": "ch2_q1",
+      "type": "fill_in_multi",
+      "prompt": "In addition to sales and leases, ___ (blank 1) and ___ (blank 2) can be valid sources of market information, if the appraiser exercises care.",
+      "answers": [
+        "offers",
+        "listings"
+      ]
+    },
+    {
+      "id": "ch2_q2",
+      "type": "list",
+      "prompt": "List five sources of rental income data.",
+      "items": [
+        "commercial property managers",
+        "tenants of comparable properties",
+        "real estate brokers and salespeople",
+        "sellers and purchasers of comparable properties",
+        "public records"
+      ]
+    },
+    {
+      "id": "ch2_q3",
+      "type": "fill_in",
+      "prompt": "Another name for market rent is ___ rent.",
+      "answer": "economic"
+    },
+    {
+      "id": "ch2_q4",
+      "type": "fill_in",
+      "prompt": "A lease that provides for one or more extensions of the lease term in the original lease document at the option of the tenant is a ___ lease.",
+      "answer": "renewal"
+    },
+    {
+      "id": "ch2_q5",
+      "type": "fill_in",
+      "prompt": "The fixed portion of the rent under the terms of a percentage lease is known as ___.",
+      "answer": "minimum base rent"
+    },
+    {
+      "id": "ch2_q6",
+      "type": "fill_in",
+      "prompt": "When contract rent exceeds economic rent, the difference is known as ___ rent.",
+      "answer": "excess"
+    },
+    {
+      "id": "ch2_q7",
+      "type": "fill_in",
+      "prompt": "The rent that is over and above a guaranteed minimum base rent is referred to as ___ rent.",
+      "answer": "overage"
+    },
+    {
+      "id": "ch2_q8",
+      "type": "fill_in",
+      "prompt": "A contract that requires a fixed minimum base rent and a variable rent based on volume of business, sales, productivity, or use of the property by the tenant is called a ___ lease.",
+      "answer": "percentage"
+    },
+    {
+      "id": "ch2_q9",
+      "type": "fill_in",
+      "prompt": "A lease in which the landlord is required to pay all operating expenses associated with the real estate is known as a ___ lease.",
+      "answer": "gross"
+    },
+    {
+      "id": "ch2_q10",
+      "type": "fill_in",
+      "prompt": "A lease in which the tenant is required to pay all operating expenses associated with the real estate is known as a ___ lease.",
+      "answer": "triple net"
+    },
+    {
+      "id": "ch2_q11",
+      "type": "list",
+      "prompt": "List four factors that must be considered when comparing rental properties.",
+      "items": [
+        "date of lease",
+        "location of property",
+        "physical characteristics of property",
+        "terms of lease"
+      ]
+    },
+    {
+      "id": "ch2_q12",
+      "type": "list",
+      "prompt": "List five common units of comparison when comparing rental properties.",
+      "items": [
+        "rent per unit",
+        "rent per room",
+        "rent per space",
+        "rent per square foot",
+        "gross income multiplier"
+      ]
+    },
+    {
+      "id": "ch2_q13",
+      "type": "fill_in",
+      "prompt": "The total leasable area, including common areas is known as ___.",
+      "answer": "gross leasable area"
+    },
+    {
+      "id": "ch2_q14",
+      "type": "fill_in",
+      "prompt": "The ___ is the potential gross income, less vacancy and collection loss, plus appropriate miscellaneous income.",
+      "answer": "effective gross income"
+    },
+    {
+      "id": "ch2_q15",
+      "type": "fill_in",
+      "prompt": "Income from vending machines and coin-operated laundries is/are considered examples of ___ income.",
+      "answer": "miscellaneous"
+    },
+    {
+      "id": "ch2_q16",
+      "type": "fill_in",
+      "prompt": "The first step in reconstructing the income and expense statement is to determine the ___.",
+      "answer": "potential gross income",
+      "accept": [
+        "pgi"
+      ]
+    },
+    {
+      "id": "ch2_q17",
+      "type": "multiple_choice_given",
+      "prompt": "Which of the following would be considered a proper expense in the reconstructed operating expense statement?",
+      "options": [
+        "Salaries",
+        "Management",
+        "Utilities",
+        "All of the above"
+      ],
+      "answer": "All of the above"
+    },
+    {
+      "id": "ch2_q18",
+      "type": "fill_in",
+      "prompt": "Expense amounts for short-lived items such as carpet, drapes, and water heaters are considered ___.",
+      "answer": "reserves for replacement"
+    },
+    {
+      "id": "ch2_q19",
+      "type": "fill_in",
+      "prompt": "When reconstructing an income/expense statement, depreciation and debt service would be considered a/an ___ expense.",
+      "answer": "improper"
+    },
+    {
+      "id": "ch2_q20",
+      "type": "fill_in",
+      "prompt": "The income remaining after developing effective gross income and allowing for operating expenses and reserves for replacement is known as ___.",
+      "answer": "net operating income"
+    },
+    {
+      "id": "ch2_q21",
+      "type": "fill_in",
+      "prompt": "___ take the form of either free rent or extra tenant improvement allowances.",
+      "answer": "rent concessions"
+    },
+    {
+      "id": "ch2_q22",
+      "type": "fill_in",
+      "prompt": "___ tends to be less than fee simple value because leases are typically set at market level when written, but usually fall below market levels as time passes.",
+      "answer": "leased fee value"
+    },
+    {
+      "id": "ch2_q23",
+      "type": "fill_in",
+      "prompt": "___ buildings are generally a little older but still have good quality management and tenants.",
+      "answer": "class b"
+    },
+    {
+      "id": "ch2_q24",
+      "type": "fill_in",
+      "prompt": "___ rent is used as a common denominator to compare leases with different provisions. This rent is the lease base rent less rent concessions.",
+      "answer": "effective"
+    },
+    {
+      "id": "ch2_q25",
+      "type": "fill_in",
+      "prompt": "The formula to calculate an operating expense ratio (OER) is: ___.",
+      "answer": "total expenses divided by effective gross income",
+      "accept": [
+        "total expenses / effective gross income",
+        "total expenses divided by egi",
+        "total expenses (after reconstruction) / egi"
+      ]
+    }
   ],
-  "distractor_pool": ["deficit", "excess", "gross", "net", "triple net", "modified gross", "full-service", "graduated", "step-up", "market", "contract", "leasehold", "fee simple", "class a", "class c", "vacancy rate", "collection loss", "operating expense ratio", "improper", "proper", "capital improvement", "franchise fee"]
+  "distractor_pool": [
+    "deficit",
+    "excess",
+    "gross",
+    "net",
+    "triple net",
+    "modified gross",
+    "full-service",
+    "graduated",
+    "step-up",
+    "market",
+    "contract",
+    "leasehold",
+    "fee simple",
+    "class a",
+    "class c",
+    "vacancy rate",
+    "collection loss",
+    "operating expense ratio",
+    "improper",
+    "proper",
+    "capital improvement",
+    "franchise fee"
+  ]
 }
