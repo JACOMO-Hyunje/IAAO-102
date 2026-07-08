@@ -23,6 +23,14 @@ from IPython.display import display
 DATA_DIR = "data"
 LOG_PATH = "attempts_log.csv"
 
+# Which chapters belong to which section. Manually curated - not inferrable
+# from chapter numbers alone, since it reflects the actual course structure.
+# Edit this as the real chapter groupings for the course become final.
+SECTIONS = {
+    "Section 1": [1, 2, 3],
+    "Section 2": [4, 5],
+}
+
 
 # ---------------------------------------------------------------------------
 # Data loading
@@ -32,6 +40,25 @@ def load_chapter(chapter_num):
     path = os.path.join(DATA_DIR, f"ch{chapter_num}_flashcards.json")
     with open(path, "r") as f:
         return json.load(f)
+
+
+def load_chapters(chapter_nums):
+    """Merge one or more chapters' card decks into a single deck.
+
+    Used for both single-chapter quizzes ([1]) and section quizzes ([1, 2, 3])
+    - there's only one loading path regardless of how many chapters are
+    involved. Card ids (e.g. "ch2_q7") already encode their origin chapter,
+    so no extra bookkeeping is needed to know which chapter a given card
+    came from later (e.g. when reading missed_question_ids back out of the
+    log).
+    """
+    merged_cards = []
+    merged_pool = []
+    for n in chapter_nums:
+        chapter_data = load_chapter(n)
+        merged_cards.extend(chapter_data["cards"])
+        merged_pool.extend(chapter_data.get("distractor_pool", []))
+    return {"chapters": list(chapter_nums), "cards": merged_cards, "distractor_pool": merged_pool}
 
 
 def available_chapters():
@@ -126,20 +153,38 @@ def ensure_log():
             writer.writerow(["timestamp", "chapter", "mode", "score", "total", "pct", "missed_question_ids"])
 
 
-def log_session(chapter, mode, score, total, missed_ids):
+def log_session(chapters, mode, score, total, missed_ids):
     """Write ONE row summarizing a fully-completed quiz session.
 
     Only called from show_summary(), which only runs once the full deck has
     been exhausted - so partial/incomplete runs (notebook closed mid-deck,
     kernel restarted, etc.) are never written at all.
+
+    'chapters' is always a list, e.g. [1] for a single-chapter quiz or
+    [1, 2, 3] for a section quiz. It's joined into a single string for the
+    CSV's existing 'chapter' column - [1] logs as "1" (identical to every
+    row logged before sections existed), [1, 2, 3] logs as "1-2-3".
     """
     ensure_log()
+
+    # Guard against a missing trailing newline on the existing file (can
+    # happen from editors/git line-ending normalization stripping it outside
+    # of this code). Without this, appending would run directly into the end
+    # of the last row instead of starting a new line.
+    if os.path.getsize(LOG_PATH) > 0:
+        with open(LOG_PATH, "rb") as f:
+            f.seek(-1, os.SEEK_END)
+            ends_with_newline = f.read(1) == b"\n"
+        if not ends_with_newline:
+            with open(LOG_PATH, "a", newline="") as f:
+                f.write("\n")
+
     pct = round(100 * score / total, 1) if total else 0.0
     with open(LOG_PATH, "a", newline="\n") as f:
         writer = csv.writer(f)
         writer.writerow([
             datetime.now().isoformat(timespec="seconds"),
-            chapter,
+            "-".join(str(c) for c in chapters),
             mode,
             score,
             total,
@@ -155,7 +200,7 @@ def log_session(chapter, mode, score, total, missed_ids):
 class QuizApp:
     def __init__(self):
         # 1. Setup Phase Controls
-        self.chapter_dd = widgets.Dropdown(options=available_chapters(), description="Chapter:")
+        self.chapter_dd = widgets.Dropdown(options=self._build_chapter_options())
         self.mode_rb = widgets.RadioButtons(
             options=["Recall (type it yourself)", "Multiple Choice"], description="Mode:"
         )
@@ -212,8 +257,30 @@ class QuizApp:
         
         display(self.app_container)
 
+    @staticmethod
+    def _build_chapter_options():
+        """Dropdown options: one entry per available chapter, plus one entry
+        per section whose member chapters are (at least partially) available.
+
+        Every option's value is a list of chapter numbers - [1] for a single
+        chapter, [1, 2, 3] for a section - so start_quiz() only ever has one
+        code path (load_chapters(value)) regardless of which was picked.
+
+        A section is filtered down to whichever of its chapters actually
+        exist right now (e.g. Section 1 = [1, 2] until ch3_flashcards.json
+        shows up, then automatically becomes [1, 2, 3] - no code change
+        needed). A section with zero available chapters is left out entirely.
+        """
+        available = available_chapters()
+        options = [(f"Chapter {n}", [n]) for n in available]
+        for section_name, member_chapters in SECTIONS.items():
+            filtered = [c for c in member_chapters if c in available]
+            if filtered:
+                options.append((section_name, filtered))
+        return options
+
     def start_quiz(self, _):
-        self.data = load_chapter(self.chapter_dd.value)
+        self.data = load_chapters(self.chapter_dd.value)
         self.cards = self.data["cards"]
         random.shuffle(self.cards)
         self.idx = 0
@@ -388,7 +455,7 @@ class QuizApp:
         if missed:
             summary_text += f"<p><b>Missed questions:</b> {', '.join(missed)}</p><br>"
             
-        log_session(self.data["chapter"], self.mode, self.score, total, missed)
+        log_session(self.data["chapters"], self.mode, self.score, total, missed)
         summary_text += f"<p style='color: gray;'>Session logged to {LOG_PATH}</p>"
         
         self.summary_html.value = summary_text
