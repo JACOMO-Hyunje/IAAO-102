@@ -9,3 +9,4 @@ timestamp,chapter,mode,score,total,pct,missed_question_ids
 2026-07-08T14:28:47,2,recall,16,25,64.0,ch2_q24;ch2_q6;ch2_q2;ch2_q11;ch2_q12;ch2_q1;ch2_q8;ch2_q22;ch2_q25
 2026-07-09T09:10:26,1,recall,17,20,85.0,ch1_q2;ch1_q5;ch1_q7
 2026-07-09T09:16:28,2,recall,16,25,64.0,ch2_q12;ch2_q6;ch2_q1;ch2_q22;ch2_q7;ch2_q24;ch2_q2;ch2_q11;ch2_q18
+2026-07-09T09:55:17,2,recall,21,25,84.0,ch2_q22;ch2_q12;ch2_q2;ch2_q11
