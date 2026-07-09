@@ -16,7 +16,7 @@
     {"id": "ch1_q12", "type": "list", "prompt": "List four types of mortgages classified according to repayment provisions.", "items": ["amortized", "straight", "reverse", "partially amortized"]},
     {"id": "ch1_q13", "type": "fill_in", "prompt": "A payment on the balance due of a note at the end of the loan term that is in excess of the regular payment amounts is called a ___ payment.", "answer": "balloon"},
     {"id": "ch1_q14", "type": "fill_in", "prompt": "A ___ mortgage covers real estate as well as personal property included with the real estate.", "answer": "package"},
-    {"id": "ch1_q15", "type": "list", "prompt": "List the four variables in real estate financing that affect the mortgage payment.", "items": ["amount borrowed", "interest rate", "term of loan", "frequency of payments"]},
+    {"id": "ch1_q15", "type": "list", "prompt": "List the four variables in real estate financing that affect the mortgage payment.", "items": ["amount borrowed", "interest rate", "terms of loan", "frequency of payments"]},
     {"id": "ch1_q16", "type": "fill_in", "prompt": "The ___ rate (or discount rate) reflects the return on the investment.", "answer": "overall yield", "accept": ["overall yield rate"], "note": "Precise term required - 'yield' alone does not count for MC-precision practice."},
     {"id": "ch1_q17", "type": "list", "prompt": "The summation concept is comprised of the following four parts:", "items": ["safe rate", "risk rate", "rate for non-liquidity", "rate for management"]},
     {"id": "ch1_q18", "type": "fill_in", "prompt": "The ___ rate reflects the relationship between the real estate taxes and the value of the property.", "answer": "effective tax"},
