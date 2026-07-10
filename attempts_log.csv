@@ -16,3 +16,6 @@ timestamp,chapter,mode,score,total,pct,missed_question_ids
 2026-07-09T15:34:20,2,recall,23,25,92.0,ch2_q24;ch2_q2
 2026-07-09T15:39:42,1,recall,18,20,90.0,ch1_q2;ch1_q15
 2026-07-09T15:49:44,2,recall,23,25,92.0,ch2_q12;ch2_q2
+2026-07-10T08:13:19,1,recall,18,20,90.0,ch1_q7;ch1_q2
+2026-07-10T08:18:57,2,recall,24,25,96.0,ch2_q2
+2026-07-10T08:18:52,3,recall,6,15,40.0,ch3_q1;ch3_q3;ch3_q6;ch3_q8;ch3_q10;ch3_q11;ch3_q12;ch3_q14;ch3_q15
