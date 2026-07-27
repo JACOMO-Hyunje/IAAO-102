@@ -128,13 +128,27 @@ def check_mc(card, selected):
 # Multiple-choice option generation
 # ---------------------------------------------------------------------------
 
-def build_mc_options(card, pool, n_options=4):
-    correct = card.get("answer")
-    if correct is None:
-        correct = card["items"][0] if card["type"] == "list" else (
-            card["answers"][0] if "answers" in card else ""
-        )
-    distractors = [d for d in pool if normalize(d) != normalize(correct)]
+def build_mc_options(card, pool, n_options=4, answer_index=0):
+    """Build MC options for a single blank.
+
+    answer_index selects which blank (for fill_in_multi cards with multiple
+    answers) - defaults to 0 for every other card type, which is what all
+    prior call sites still expect.
+
+    All of a card's own correct answers (not just the one being built for)
+    are excluded from the distractor pool, so e.g. blank 2's correct answer
+    never accidentally shows up as a "wrong" option for blank 1.
+    """
+    if "answers" in card:
+        correct = card["answers"][answer_index]
+        own_answers = set(normalize(a) for a in card["answers"])
+    else:
+        correct = card.get("answer")
+        if correct is None:
+            correct = card["items"][0] if card["type"] == "list" else ""
+        own_answers = {normalize(correct)}
+
+    distractors = [d for d in pool if normalize(d) not in own_answers]
     random.shuffle(distractors)
     options = [correct] + distractors[: max(0, n_options - 1)]
     random.shuffle(options)
@@ -198,7 +212,28 @@ def log_session(chapters, mode, score, total, missed_ids):
 # ---------------------------------------------------------------------------
 
 class QuizApp:
+    # ipywidgets' default RadioButtons/Checkbox labels don't wrap long text -
+    # they truncate at a fixed width. Injected once per app instance to force
+    # proper wrapping for every radio/checkbox option rendered afterward.
+    _WRAP_FIX_CSS = """
+    <style>
+    .widget-radio-box label, .widget-radio-box .widget-label-basic,
+    .widget-checkbox label, .widget-checkbox .widget-label-basic {
+        white-space: normal !important;
+        width: auto !important;
+        max-width: 100% !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+    }
+    .widget-radio-box, .widget-checkbox {
+        width: 100% !important;
+    }
+    </style>
+    """
+
     def __init__(self):
+        display(widgets.HTML(value=self._WRAP_FIX_CSS))
+
         # 1. Setup Phase Controls
         self.chapter_dd = widgets.Dropdown(options=self._build_chapter_options())
         self.mode_rb = widgets.RadioButtons(
@@ -343,22 +378,38 @@ class QuizApp:
 
     def _setup_mc(self, card):
         pool = self.data.get("distractor_pool", [])
+        wide_layout = widgets.Layout(width="100%")
         if card["type"] == "list":
             option_pool = card["items"] + random.sample(pool, min(len(pool), 4))
             random.shuffle(option_pool)
             instructions = widgets.Label(value=f"(Select all {len(card['items'])} correct items)")
-            checkboxes = [widgets.Checkbox(description=opt, value=False) for opt in option_pool]
+            checkboxes = [widgets.Checkbox(description=opt, value=False, layout=wide_layout, indent=False) for opt in option_pool]
             box = widgets.VBox(checkboxes)
             self.input_container.children = [instructions, box]
+            self.current_input_widget = box
         elif card["type"] == "multiple_choice_given":
-            box = widgets.RadioButtons(options=card["options"])
+            box = widgets.RadioButtons(options=card["options"], layout=wide_layout)
             self.input_container.children = [box]
+            self.current_input_widget = box
+        elif card["type"] == "fill_in_multi":
+            n = len(card["answers"])
+            blank1_label = widgets.Label(value="Blank 1:")
+            blank1_box = widgets.RadioButtons(
+                options=build_mc_options(card, pool, answer_index=0), layout=wide_layout
+            )
+            blank2_label = widgets.Label(value="Blank 2:")
+            blank2_box = widgets.RadioButtons(
+                options=build_mc_options(card, pool, answer_index=1), layout=wide_layout
+            )
+            self.input_container.children = [blank1_label, blank1_box, blank2_label, blank2_box]
+            # Two widgets for this card type - stored as a list rather than a
+            # single widget, since on_submit_clicked needs both values.
+            self.current_input_widget = [blank1_box, blank2_box]
         else:
             options = build_mc_options(card, pool)
-            box = widgets.RadioButtons(options=options)
+            box = widgets.RadioButtons(options=options, layout=wide_layout)
             self.input_container.children = [box]
-            
-        self.current_input_widget = box
+            self.current_input_widget = box
 
     def on_submit_clicked(self, _):
         # Ignore clicks if already evaluated
@@ -423,6 +474,20 @@ class QuizApp:
                     feedback_text = "<b style='color: green;'>Correct!</b>"
                 else:
                     feedback_text = f"<span style='color: red; font-weight: bold;'>Incorrect.</span> Correct answer: {card['answer']}"
+            elif card["type"] == "fill_in_multi":
+                # box is [blank1_widget, blank2_widget] here, not a single widget -
+                # each blank is graded against its own specific position, since the
+                # UI already labels which selection belongs to which blank.
+                blank1_widget, blank2_widget = box
+                correct = (
+                    normalize(blank1_widget.value) == normalize(card["answers"][0])
+                    and normalize(blank2_widget.value) == normalize(card["answers"][1])
+                )
+                self._record(card, correct)
+                if correct:
+                    feedback_text = "<b style='color: green;'>Correct!</b>"
+                else:
+                    feedback_text = f"<span style='color: red; font-weight: bold;'>Incorrect.</span> Correct answers: {', '.join(card['answers'])}"
             else:
                 target = card.get("answer") or card.get("answers", [""])[0]
                 correct = normalize(box.value) == normalize(target)
