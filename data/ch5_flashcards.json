@@ -1,0 +1,19 @@
+{
+  "chapter": 5,
+  "title": "Historical Capitalization Methods (Straight-Line Capitalization)",
+  "cards": [
+    {"id": "ch5_q1", "type": "multiple_choice_given", "prompt": "If the land capitalization rate in straight-line capitalization (including the effective tax rate) is 9%, and the remaining economic life of the improvement is 25 years, the building capitalization rate is ___.", "options": ["13%", "9%", "5%", "14%"], "answer": "13%"},
+    {"id": "ch5_q2", "type": "fill_in", "prompt": "In straight-line capitalization, ___ is received in equal amounts during the economic life of the improvement.", "answer": "recapture"},
+    {"id": "ch5_q3", "type": "fill_in", "prompt": "Straight-line capitalization assumes a ___ income stream during the remaining economic life of the improvements.", "answer": "declining"},
+    {"id": "ch5_q4", "type": "list", "prompt": "Straight-line capitalization is best utilized when the property has:", "items": ["income expected to decline over the remaining economic life", "discount (or overall yield) earned on nondepreciated balance of investment", "recapture received in equal amounts during remaining life of improvements"]},
+    {"id": "ch5_q5", "type": "list", "prompt": "The building residual technique should be used when:", "items": ["land value supported by market data is known", "improvement is not new", "improvement is not adequate for site", "vacant land sales are available"]},
+    {"id": "ch5_q6", "type": "list", "prompt": "The land residual technique should be used when:", "items": ["improvements are adequate in condition and suitability to the site", "land consists of a large parcel with no comparable property available", "land sales are not available", "building is new, and the proper use and cost are known"]},
+    {"id": "ch5_q7", "type": "list", "prompt": "The land capitalization rate is composed of what components?", "items": ["discount rate (overall yield rate)", "effective tax rate"], "accept_variants": {"discount rate (overall yield rate)": ["overall yield rate", "discount rate", "yield rate"]}},
+    {"id": "ch5_q8", "type": "list", "prompt": "The building capitalization rate is composed of what components?", "items": ["discount rate (overall yield rate)", "recapture rate", "effective tax rate"], "accept_variants": {"discount rate (overall yield rate)": ["overall yield rate", "discount rate", "yield rate"]}},
+    {"id": "ch5_q9", "type": "fill_in", "prompt": "The overall yield rate (YO) is another name for the property's ___ rate.", "answer": "discount"},
+    {"id": "ch5_q10", "type": "fill_in_multi", "prompt": "In the building residual technique, the land capitalization rate is ___ by the ___ value to obtain the land income.", "answers": ["multiplied", "land"]},
+    {"id": "ch5_q11", "type": "fill_in_multi", "prompt": "To obtain the ___ capitalization rate, one can divide the building income by the building ___.", "answers": ["building", "value"]},
+    {"id": "ch5_q12", "type": "fill_in", "prompt": "The ___ residual technique requires the development of the discount rate, recapture rate, effective tax rate, and a supportable market value for land.", "answer": "building"}
+  ],
+  "distractor_pool": ["divided", "added", "subtracted", "land", "building", "total property value", "market value", "cost", "income", "area", "recapture rate", "discount rate", "effective tax rate", "declining", "stable", "increasing", "yield capitalization", "direct capitalization", "band of investment", "debt coverage ratio"]
+}
